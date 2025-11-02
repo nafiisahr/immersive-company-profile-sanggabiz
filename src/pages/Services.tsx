@@ -1,10 +1,6 @@
 // src/pages/Services.tsx
 import React from "react";
-import {
-  Cog,
-  Users,
-  Target,
-} from "lucide-react"; // Import icon dari Lucide
+import { Cog, Users, Target } from "lucide-react";
 
 const Services: React.FC = () => {
   const services = [
@@ -33,7 +29,7 @@ const Services: React.FC = () => {
           Layanan Sanggabiz
         </h1>
         <p className="text-gray-600 text-lg leading-relaxed">
-          Solusi terintegrasi untuk membawa bisnis Anda menuju efisiensi dan pertumbuhan berkelanjutan.
+          Kami bantu operasional Anda dengan layanan berbasis hasil. Pilih solusi yang sesuai dengan kebutuhan bisnis Anda.
         </p>
       </div>
 
@@ -59,6 +55,18 @@ const Services: React.FC = () => {
             <p className="text-gray-600 leading-relaxed">{service.desc}</p>
           </div>
         ))}
+      </div>
+
+      {/* BLOK HARGA & CTA */}
+      <div className="mt-16 text-center max-w-3xl px-4">
+        <p className="text-gray-700 text-lg mb-6">
+          Mulai dari <span className="font-bold text-blue-600">RpX juta/bulan</span> — fleksibel sesuai kebutuhan bisnis Anda.
+        </p>
+
+        {/* CTA utama */}
+        <button className="text-blue-500 font-medium hover:underline text-lg">
+          Konsultasikan Sekarang
+        </button>
       </div>
     </section>
   );

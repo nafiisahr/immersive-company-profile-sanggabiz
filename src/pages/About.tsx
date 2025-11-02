@@ -1,6 +1,6 @@
 // src/pages/About.tsx
 import React from "react";
-import { Users, HeartHandshake, Globe } from "lucide-react";
+import { Users, HeartHandshake, Globe, Instagram, Youtube, Linkedin } from "lucide-react";
 
 const About: React.FC = () => {
   const features = [
@@ -18,6 +18,27 @@ const About: React.FC = () => {
       icon: <Globe className="w-10 h-10 text-blue-500" />,
       title: "Skalabilitas Global",
       desc: "Sanggabiz membantu bisnis Anda tumbuh lintas wilayah dengan kolaborasi digital yang efisien.",
+    },
+  ];
+
+  const socialLinks = [
+    {
+      icon: <Instagram className="w-6 h-6" />,
+      href: "https://www.instagram.com/sanggabiz",
+      label: "Instagram",
+      color: "text-pink-500",
+    },
+    {
+      icon: <Youtube className="w-6 h-6" />,
+      href: "https://www.youtube.com/sanggabiz",
+      label: "YouTube",
+      color: "text-red-500",
+    },
+    {
+      icon: <Linkedin className="w-6 h-6" />,
+      href: "https://www.linkedin.com/company/sanggabiz",
+      label: "LinkedIn",
+      color: "text-blue-600",
     },
   ];
 
@@ -52,6 +73,22 @@ const About: React.FC = () => {
             {/* DESCRIPTION */}
             <p className="text-gray-600 leading-relaxed">{f.desc}</p>
           </div>
+        ))}
+      </div>
+
+      {/* SOCIAL MEDIA */}
+      <div className="mt-12 flex space-x-6">
+        {socialLinks.map((s, i) => (
+          <a
+            key={i}
+            href={s.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`hover:scale-110 transition-transform duration-300 ${s.color}`}
+            aria-label={s.label}
+          >
+            {s.icon}
+          </a>
         ))}
       </div>
     </section>
